@@ -1,4 +1,7 @@
+import asyncio
+
 async def task_1(i: int):
+    # print('1', end='')
     if i == 0:
         return
 
@@ -9,6 +12,7 @@ async def task_1(i: int):
 
 
 async def task_2(i: int):
+    # print('2', end='')
     if i == 0:
         return
 
@@ -30,3 +34,7 @@ async def coroutines_execution_order(i: int = 42) -> int:
     await task_1(i)
 
     # YOUR CODE GOES HERE
+    return 122122122
+
+if __name__ == '__main__':
+    print(asyncio.run(coroutines_execution_order()))
